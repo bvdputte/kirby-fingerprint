@@ -9,6 +9,7 @@ When the files are updated, new hashes are added to the filenames automatically;
 
 - unzip [master.zip](https://github.com/bvdputte/kirby-fingerprint/archive/master.zip) as folder `site/plugins/kirby-fingerprint` or
 - `git submodule add https://github.com/bvdputte/kirby-fingerprint.git site/plugins/kirby-fingerprint`
+- `composer require bvdputte/kirby-fingerprint`
 
 💡 Add the following to your `.htaccess` file:
 
@@ -27,6 +28,17 @@ cssfingerprint("assets/styles.css");
 jsfingerprint("assets/scripts.js");
 // Output: <script src="//localhost:3000/assets/js/scripts.1e9dd0c95e7b12ce96729501c7585deb.js"></script>
 ```
+
+You can also use this on a `path` or `$file` objects:
+
+```php
+echo fingerprint($page->some_imagefield()->toFile()->root());
+// Output: /var/www/mysite/content/home/testimage.0d859e73e897635c53e59407be9b32aa.jpg
+echo $page->some_imagefield()->toFile()->fingerprint();
+// Output: /var/www/mysite/content/home/testimage.0d859e73e897635c53e59407be9b32aa.jpg
+```
+
+💡 Always test if the file exists first!
 
 ## Advanced features
 
