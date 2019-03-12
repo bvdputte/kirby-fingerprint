@@ -29,17 +29,6 @@ jsfingerprint("assets/scripts.js");
 // Output: <script src="//localhost:3000/assets/js/scripts.1e9dd0c95e7b12ce96729501c7585deb.js"></script>
 ```
 
-You can also use this on a `path` or `$file` objects:
-
-```php
-echo fingerprint($page->some_imagefield()->toFile()->root());
-// Output: /var/www/mysite/content/home/testimage.0d859e73e897635c53e59407be9b32aa.jpg
-echo $page->some_imagefield()->toFile()->fingerprint();
-// Output: /var/www/mysite/content/home/testimage.0d859e73e897635c53e59407be9b32aa.jpg
-```
-
-💡 Always test if the file exists first!
-
 ## Advanced features
 
 For more advanced features, such as subresource integrity, please checkout [bnomei's kirby3-fingerprint plugin](https://github.com/bnomei/kirby3-fingerprint).
