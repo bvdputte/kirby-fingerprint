@@ -11,6 +11,8 @@ When the files are updated, new hashes are added to the filenames automatically;
 - `git submodule add https://github.com/bvdputte/kirby-fingerprint.git site/plugins/kirby-fingerprint`
 - `composer require bvdputte/kirby-fingerprint`
 
+### Apache .htaccess rules
+
 💡 Add the following to your `.htaccess` file:
 
 ```
@@ -18,6 +20,18 @@ When the files are updated, new hashes are added to the filenames automatically;
 # More info: https://github.com/bvdputte/kirby-fingerprint
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.+)\.([0-9a-z]{32})\.(js|css|png|jpe?g|gif|svg|ico)$ $1.$3 [L]
+```
+
+Place immediately after the `RewriteBase` definition.
+
+### Nginx rules
+
+Add the following to your virtual host setup:
+
+```
+location ~ (.+)\.(?:\d+)\.(js|css)$ {
+    try_files $uri $1.$2;
+}
 ```
 
 ## Usage
