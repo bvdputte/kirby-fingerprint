@@ -23,9 +23,9 @@ RewriteRule ^(.+)\.([0-9a-z]{32})\.(js|css|png|jpe?g|gif|svg|ico)$ $1.$3 [L]
 ## Usage
 
 ```php
-css("assets/styles.css");
+css("assets/css/styles.css");
 // Output: <link href="//localhost:3000/assets/css/styles.db5796ea5bf253bb7be3526eb083e068.css" rel="stylesheet">
-js("assets/scripts.js");
+js("assets/js/scripts.js");
 // Output: <script src="//localhost:3000/assets/js/scripts.1e9dd0c95e7b12ce96729501c7585deb.js"></script>
 ```
 
