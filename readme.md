@@ -43,6 +43,8 @@ js("assets/js/scripts.js");
 // Output: <script src="//localhost:3000/assets/js/scripts.1e9dd0c95e7b12ce96729501c7585deb.js"></script>
 ```
 
+⚠️ Doesn't work with `@auto` keyword ([yet?](https://github.com/getkirby/kirby/issues/1608)).
+
 ## Options
 
 Disable plugin:
