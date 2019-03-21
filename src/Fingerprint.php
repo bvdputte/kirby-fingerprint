@@ -10,8 +10,12 @@ class Fingerprint
         if ( ! file_exists($path) || count($pathinfo = pathinfo($path)) < 4) {
             return $path;
         }
-    
-        $basename = $pathinfo['filename'] . '.' . md5_file($path) . '.' . $pathinfo['extension'];
+
+        if(option('bvdputte.fingerprint.disabled')) {
+            $basename = $pathinfo['filename'] . '.' . $pathinfo['extension'];
+        } else {
+            $basename = $pathinfo['filename'] . '.' . md5_file($path) . '.' . $pathinfo['extension'];
+        }
     
         if ($pathinfo['dirname'] === '.') {
             return $filename;

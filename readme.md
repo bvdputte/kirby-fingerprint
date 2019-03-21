@@ -43,6 +43,17 @@ js("assets/js/scripts.js");
 // Output: <script src="//localhost:3000/assets/js/scripts.1e9dd0c95e7b12ce96729501c7585deb.js"></script>
 ```
 
+## Options
+
+Disable plugin:
+
+```php
+// config.php
+return [
+    'bvdputte.fingerprint.disabled' => true
+];
+```
+
 ## Advanced features
 
 For more advanced features, such as subresource integrity, please checkout [bnomei's kirby3-fingerprint plugin](https://github.com/bnomei/kirby3-fingerprint).
