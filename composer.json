@@ -1,6 +1,6 @@
 {
     "name": "bvdputte/kirby-fingerprint",
-    "description": "Cache-busting utility to fingerprint files in Kirby 3",
+    "description": "Cache-busting utility to fingerprint assets (JS/CSS) in Kirby 3",
     "license": "MIT",
     "authors": [
         {
