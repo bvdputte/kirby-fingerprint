@@ -10,9 +10,15 @@ Kirby::plugin('bvdputte/fingerprint', [
     ],
     'components' => [
         'css' => function ($kirby, $url, $options) {
+            if ($url === '@auto') {
+                $url = \Kirby\Cms\Url::toTemplateAsset('css/templates', 'css');
+            }
             return bvdputte\Fingerprint::addHash($url);
         },
         'js' => function ($kirby, $url, $options) {
+            if ($url === '@auto') {
+                $url = \Kirby\Cms\Url::toTemplateAsset('js/templates', 'js');
+            }
             return bvdputte\Fingerprint::addHash($url);
         },
     ]
