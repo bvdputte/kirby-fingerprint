@@ -5,6 +5,9 @@ Re-uses the [`css()`](https://getkirby.com/docs/reference/templates/helpers/css)
 
 When the files are updated, new hashes are added to the filenames automatically; so browser cache gets busted.
 
+If you use `css('@auto')` or `js('@auto')`, you have to use `fingerprint_css()` and `fingerprint_js()` in your templates for now. 
+In future versions these might not be needed anymore. 
+
 ## Installation
 
 - unzip [master.zip](https://github.com/bvdputte/kirby-fingerprint/archive/master.zip) as folder `site/plugins/kirby-fingerprint` or
@@ -41,6 +44,10 @@ css("assets/css/styles.css");
 // Output: <link href="//localhost:3000/assets/css/styles.db5796ea5bf253bb7be3526eb083e068.css" rel="stylesheet">
 js("assets/js/scripts.js");
 // Output: <script src="//localhost:3000/assets/js/scripts.1e9dd0c95e7b12ce96729501c7585deb.js"></script>
+fingerprint_css("@auto");
+// Output: <link href="//localhost:3000/assets/css/templates/home.db5796ea5bf253bb7be3526eb083e068.css" rel="stylesheet">
+fingerprint_js("@auto");
+// Output: <script src="//localhost:3000/assets/js/templates/home.1e9dd0c95e7b12ce96729501c7585deb.js"></script>
 ```
 
 ## Options
