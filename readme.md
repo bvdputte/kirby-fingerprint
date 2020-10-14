@@ -29,7 +29,7 @@ Place immediately after the `RewriteBase` definition.
 Add the following to your virtual host setup:
 
 ```
-location ~ (.+)\.(?:\d+)\.(js|css)$ {
+location ~ (.+)\.(?:[0-9,a-z]+)\.(js|css)$ {
     try_files $uri $1.$2;
 }
 ```
