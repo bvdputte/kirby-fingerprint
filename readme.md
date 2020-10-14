@@ -45,7 +45,7 @@ js("assets/js/scripts.js");
 
 ## Options
 
-Disable plugin:
+1. Disable plugin:
 
 ```php
 // config.php
@@ -53,6 +53,17 @@ return [
     'bvdputte.fingerprint.disabled' => true
 ];
 ```
+
+2. Use a parameter instead of a hashed filename:
+
+```php
+// config.php
+return [
+    'bvdputte.fingerprint.parameter' => true
+];
+```
+
+This can be useful in situations where you don't want/can work with rewrites (e.g. in Laravel Valet). If possible; [don't use parameters in production environment](https://www.stevesouders.com/blog/2008/08/23/revving-filenames-dont-use-querystring/), use hashed filenames instead.
 
 ## Advanced features
 

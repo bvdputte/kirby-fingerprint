@@ -6,7 +6,8 @@ require __DIR__ . DS . "src" . DS . "Fingerprint.php";
 
 Kirby::plugin('bvdputte/fingerprint', [
     'options' => [
-        'disabled' => false
+        'disabled' => false,
+        'parameter' => false
     ],
     'components' => [
         'css' => function ($kirby, $url, $options) {
