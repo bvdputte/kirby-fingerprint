@@ -9,11 +9,11 @@ class Fingerprint
     public static function addHash($path)
     {
         if (Url::isAbsolute($path)) {
-            
+
             if (Url::toObject()->host() !== Url::toObject($path)->host()) {
                 return $path;
             }
-            
+
             $path = Url::path($path);
         }
 
@@ -29,10 +29,6 @@ class Fingerprint
             } else {
                 $basename = $pathinfo['filename'] . '.' .  md5_file($path) . '.' . $pathinfo['extension'];
             }
-        }
-
-        if ($pathinfo['dirname'] === '.') {
-            return $filename;
         }
 
         return $pathinfo['dirname'] . DS . $basename;
