@@ -31,6 +31,6 @@ class Fingerprint
             }
         }
 
-        return $pathinfo['dirname'] . DS . $basename;
+        return $pathinfo['dirname'] . "/" . $basename;
     }
 }
