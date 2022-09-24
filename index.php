@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . DS . "src" . DS . "Fingerprint.php";
+require __DIR__ . "/src/Fingerprint.php";
 
 @include_once __DIR__ . '/vendor/autoload.php';
 
