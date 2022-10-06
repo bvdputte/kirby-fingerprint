@@ -3,6 +3,7 @@
     "description": "Cache-busting utility to fingerprint assets (JS/CSS) in Kirby 3",
     "license": "MIT",
     "type": "kirby-plugin",
+    "version": "2.2.5",
     "authors": [
         {
             "name": "Bart Vandeputte",
