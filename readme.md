@@ -1,7 +1,7 @@
-# Kirby 3 Fingerprint
+# Kirby Fingerprint
 
-A little utility to add cache-busting fingerprints to assets (JS/CSS) in Kirby 3.
-Re-uses the [`css()`](https://getkirby.com/docs/reference/templates/helpers/css) and [`js()`](https://getkirby.com/docs/reference/templates/helpers/js)-helpers in Kirby 3 as much as possible.
+A little utility to add cache-busting fingerprints to assets (JS/CSS) in Kirby CMS.
+Re-uses the [`css()`](https://getkirby.com/docs/reference/templates/helpers/css) and [`js()`](https://getkirby.com/docs/reference/templates/helpers/js)-helpers in Kirby as much as possible.
 
 When the files are updated, new hashes are added to the filenames automatically; so browser cache gets busted.
 
